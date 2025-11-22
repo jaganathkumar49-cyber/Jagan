@@ -5,9 +5,9 @@ import { Code2, ArrowUpRight } from 'lucide-react';
 
 export const Projects: React.FC = () => {
   return (
-    <section id="projects" className="py-24">
+    <section id="projects" className="py-24 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <Reveal>
+        <Reveal direction="up">
           <div className="mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">Featured Projects</h2>
             <div className="h-1 w-20 bg-neon-400 rounded-full"></div>
@@ -16,7 +16,7 @@ export const Projects: React.FC = () => {
 
         <div className="grid md:grid-cols-2 gap-8">
           {PROJECT_DATA.map((project, index) => (
-            <Reveal key={project.id} delay={index * 0.1}>
+            <Reveal key={project.id} delay={index * 0.1} direction={index % 2 === 0 ? "left" : "right"} width="100%">
               <div className="group relative h-full bg-zinc-900 border border-zinc-800 rounded-2xl p-8 hover:border-neon-400/50 transition-colors duration-300">
                 <div className="absolute top-8 right-8 text-zinc-600 group-hover:text-neon-400 transition-colors">
                   <ArrowUpRight size={24} />

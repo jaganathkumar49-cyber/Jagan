@@ -8,9 +8,9 @@ import { Contact } from './components/Contact';
 
 const App: React.FC = () => {
   return (
-    <div className="bg-zinc-950 min-h-screen text-zinc-100 font-sans selection:bg-neon-400 selection:text-black">
+    <div className="bg-zinc-950 min-h-screen text-zinc-100 font-sans selection:bg-neon-400 selection:text-black relative">
       <Navigation />
-      <main>
+      <main className="relative z-10">
         <Hero />
         <Experience />
         <Projects />

@@ -5,13 +5,13 @@ import { Briefcase, GraduationCap, MapPin } from 'lucide-react';
 
 export const Experience: React.FC = () => {
   return (
-    <section id="experience" className="py-24 bg-zinc-900/30">
+    <section id="experience" className="py-24 bg-zinc-900/30 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="grid md:grid-cols-2 gap-12">
           {/* Work Experience */}
           <div>
-            <Reveal>
+            <Reveal direction="left">
               <h2 className="text-3xl font-bold text-white mb-12 flex items-center gap-3">
                 <Briefcase className="text-neon-400" /> Professional Experience
               </h2>
@@ -19,8 +19,8 @@ export const Experience: React.FC = () => {
 
             <div className="space-y-12">
               {EXPERIENCE_DATA.map((exp) => (
-                <Reveal key={exp.id} width="100%">
-                  <div className="relative border-l-2 border-zinc-800 pl-8 pb-2">
+                <Reveal key={exp.id} width="100%" direction="left">
+                  <div className="relative border-l-2 border-zinc-800 pl-8 pb-2 hover:border-neon-400/30 transition-colors duration-300">
                     <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-neon-400 shadow-[0_0_10px_rgba(34,211,238,0.5)]"></div>
                     <div className="mb-2">
                       <h3 className="text-xl font-bold text-white">{exp.role}</h3>
@@ -41,7 +41,7 @@ export const Experience: React.FC = () => {
 
           {/* Education */}
           <div>
-            <Reveal>
+            <Reveal direction="right">
               <h2 className="text-3xl font-bold text-white mb-12 flex items-center gap-3">
                 <GraduationCap className="text-neon-400" /> Education
               </h2>
@@ -49,8 +49,8 @@ export const Experience: React.FC = () => {
 
             <div className="space-y-12">
               {EDUCATION_DATA.map((edu) => (
-                <Reveal key={edu.id} width="100%">
-                  <div className="relative border-l-2 border-zinc-800 pl-8 pb-2">
+                <Reveal key={edu.id} width="100%" direction="right">
+                  <div className="relative border-l-2 border-zinc-800 pl-8 pb-2 hover:border-zinc-600 transition-colors duration-300">
                     <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-zinc-700"></div>
                     <div className="mb-2">
                       <h3 className="text-xl font-bold text-white">{edu.degree}</h3>
